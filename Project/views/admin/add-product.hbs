@@ -1,0 +1,47 @@
+<section>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div
+        class="col-3 d-flex justify-content-center border border-2 rounded-3 offset-5"
+      >
+        <h2>ADD PRODUCT</h2>
+      </div>
+
+    </div>
+    <div class="row mt-4 p-5">
+      <div
+        class="col-3 border border-2 rounded-3 p-5 bg-danger bg-gradient offset-5"
+      >
+        <form action="/admin/add-products" enctype="multipart/form-data" method='POST'>
+
+          <label for="">NAME</label>
+          <input class="mt-1 text-center" type="text" name="name" placeholder="NAME" />
+
+          <label for="">Category</label>
+          <input class="mt-1 text-center" type="text" name="category" placeholder="Category" />
+
+           <label for="">Price</label>
+          <input class="mt-1 text-center" type="number" name="price" placeholder="price" />
+
+          <label for="">Description</label>
+          <input
+            class="mt-1 text-center"
+            type="text"
+            placeholder="Description" name="description"
+          />
+          <label for="">image</label>
+          <input class="mt-1 text-center" type="file" name="image" placeholder="Image" />
+
+          <button
+            class="form-control mt-4 text-center btn btn-dark text-white"
+            type="submit"
+          >SUBMIT</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

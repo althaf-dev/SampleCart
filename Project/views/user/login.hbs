@@ -1,0 +1,43 @@
+<section>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-4 mt-4 offset-3">
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-4 ">
+            <h3>LOGIN</h3>
+          </div>
+        </div>
+
+        <form action="/login" method="post" class="p-3">
+
+        {{#if loginError}}
+        <p>user does not exist</p>
+        {{/if}}
+          <label for="">EMAIL</label>
+          <input type="email" name="email" class="form-control mt-2 mb-2" />
+
+          <label for="">Password</label>
+          <input
+            type="password"
+            name="Password"
+            class="form-control mt-2 mb-2"
+          />
+
+          <div class="row mt-4">
+            <div class="col-6">
+              <span><a href="/signup" style="text-decoration: none;">Create a new account?</a></span>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary">LOGIN</button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

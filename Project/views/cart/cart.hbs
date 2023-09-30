@@ -1,0 +1,60 @@
+<section>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">item</th>
+              <th scope="col">Title</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each product}}
+              <tr>
+                {{#each products}}
+                  <th scope="row"><img
+                      src="/product-images/{{this._id}}.jpg"
+                      alt="s"
+                      width="50px"
+                      height="50px"
+                    /></th>
+
+                  <td>{{this.name}}</td>
+                  <td>{{this.price}}</td>
+                {{/each}}
+                <td>
+
+                  <button
+                    class="btn btn-info me-1"
+                    onclick="incQty(event,'{{this.item}}',-1)"
+                  >-</button><span>{{this.quantity}}</span><button
+                    class="btn btn-success ms-1"
+                    onclick="incQty(event,'{{this.item}}',1)"
+                  >+</button></td>
+
+                <td><button
+                    class="btn btn-danger"
+                    onclick="removeItem('{{this.item}}',event)"
+                  >Remove</button></td>
+              </tr>
+
+            {{/each}}
+          </tbody>
+        </table>
+
+        <hr>
+        <div class=" col-3 offset-9">
+          <h4 >TOTAL PRICE:<span id="total">{{total}}</span></h4>
+          <a class="btn btn-success" href="/placeorder">PLACE ORDER</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

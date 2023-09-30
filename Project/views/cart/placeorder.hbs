@@ -1,0 +1,62 @@
+<section>
+
+  <div class="container">
+    <div class="row mt-5">
+      <form action="" id="checkout-form">
+
+        <div class="row">
+          <div class="row">
+            <div class="col-4 p-1">
+
+              <h3>ENTER DELIVERY DETAILS</h3>
+
+              <input
+                type="text"
+                name="address"
+                class="form-control mt-4 mb-2"
+                id=""
+                placeholder=" Address"
+              />
+              <input
+                type="text"
+                name="pin"
+                class="form-control mt-2 mb-2"
+                placeholder="PIN number"
+              />
+              <input
+                type="text"
+                name="mobile"
+                class="form-control mt-2 mb-4"
+                placeholder="Mobile number"
+              />
+            </div>
+
+            <div class="col-4 ms-4 p-2 border border-3">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mt-4">TOTAL AMOUNT: {{data}}</h3>
+              <p> choose payment option</p>
+              <input type="radio" name="paymethode" id="cod"  value="COD"/>
+              <label for="#cod">COD</label><br />
+              <input type="radio" name="paymethode" id="online" value="ONLINE" />
+              <label for="#online">Online</label>
+              <input type="text" name="userId"  value="{{user._id}}" hidden>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 offset-8">
+                        <button type="submit" class="btn btn-primary">checkout</button>
+                    </div>
+                </div>
+              
+
+            </div>
+          </div>
+
+        </div>
+        
+
+      </form>
+    </div>
+  </div>
+</section>
